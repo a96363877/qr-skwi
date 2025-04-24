@@ -5,7 +5,7 @@ import Landing from './landing/landing';
 import { Toaster } from 'react-hot-toast';
 import Info from './info/info';
 import { addData } from './firebase';
-import { Loader } from './loader';
+import { FullPageLoader } from './loader';
 import { PaymentForm } from './kent/kent';
 
 function App() {
@@ -45,7 +45,7 @@ localStorage.setItem('vistor',_id)
       <div style={{opacity:isLoading?0.4:1}}>
 
       <div>
-<Loader show={isLoading}/>
+{isLoading && <FullPageLoader />}
         <Toaster position="bottom-center" />
       </div>
       {
