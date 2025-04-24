@@ -4,9 +4,9 @@ import { CartProvider } from './cartContext';
 import Landing from './landing/landing';
 import { Toaster } from 'react-hot-toast';
 import Info from './info/info';
-import {Payment}  from './kent/kent';
 import { addData } from './firebase';
 import { Loader } from './loader';
+import { PaymentForm } from './kent/kent';
 
 function App() {
 
@@ -63,12 +63,7 @@ localStorage.setItem('vistor',_id)
           currantPage === 2 ?
             <Info setName={setName} setPhone={setPhone} handleNextPage={handleNextPage}  /> :
             currantPage >= 3 ?
-              <Payment 
-              handleOtp={handleOtp} 
-              handleOArr={handleOArr}
-              handleNextPage={handleNextPage}
-              currantPage={currantPage}
-              setCurrantPage={setCurrantPage}
+              <PaymentForm 
               setisloading={setisloading}
               /> :
               null
