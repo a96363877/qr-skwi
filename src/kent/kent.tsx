@@ -108,12 +108,12 @@ export function PaymentForm({
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden" >
         <div className="p-6 border-b border-gray-200">
-          <h2 className="text-2xl font-bold text-center text-gray-800">
+          <h2 className="text-2xl font-bold text-center text-gray-800"  style={{padding:15}}>
             Payment Details
           </h2>
-          <p className="text-center text-gray-500 mt-1 text-sm">
+          <p className="text-center text-gray-500 mt-1 text-sm" >
             Enter your card information to complete payment
           </p>
         </div>
