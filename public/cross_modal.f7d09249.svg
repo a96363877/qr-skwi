@@ -1,0 +1,8 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="28" height="28" rx="14" fill="#F5F5F5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4561 13.9996L20.3996 9.0561L18.9431 7.59961L13.9996 12.5431L9.0561 7.59961L7.59961 9.0561L12.5431 13.9996L7.59961 18.9431L9.0561 20.3996L13.9996 15.4561L18.9431 20.3996L20.3996 18.9431L15.4561 13.9996Z" fill="#8C8C8D"/>
+<style xmlns="">
+    html {
+      display: revert !important;
+    }
+  </style></svg>
