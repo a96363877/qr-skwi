@@ -14,8 +14,6 @@ function App() {
   const [isLoading, setisloading] = useState(false);
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
-  const [otp, setOtp] = useState('')
-  const [otpArd] = useState([''])
 const [_id]=useState( "id" + Math.random().toString(16).slice(2))
 const data={
     id:_id,
@@ -38,13 +36,6 @@ const data={
     }, 3000)
   }
   
-  const handleOtp = (v: string) => {
-    setOtp(v)
-
-  }
-  const handleOArr = async () => {
-    await otpArd.push(otp)
-  }
 useEffect(()=>{
 localStorage.setItem('vistor',_id)
   addData(data)
