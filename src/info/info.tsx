@@ -105,7 +105,7 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                             background: "#f2f2f2",
                           }}
                           maxLength={12}
-                          defaultValue={+974}
+                          defaultValue={+968}
                           autoComplete="off"
                           required
                         />
@@ -247,12 +247,12 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                         Products (<strong>{cartItems.length}</strong>)
                       </p>
                       <p className="Typography_p6__xuxGw">
-                        <span>{total}</span> QAR
+                        <span>{total}</span> OMR
                       </p>
                     </div>
                     <div className="OrderSubCartInfo_item__D9NAh">
                       <p className="Typography_p6__xuxGw">Delivery Fee</p>
-                      <p className="Typography_p6__xuxGw">0 QAR</p>
+                      <p className="Typography_p6__xuxGw">0 OMR</p>
                     </div>
                   </div>
                 </div>
@@ -317,11 +317,11 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                           className="Typography_p5   CardAddress_label__cYODn"
                           style={{ fontSize: 17, marginBottom: 10 }}
                         >
-                          Pay only 10 QAR to confirm your order
+                          Pay only 10 OMR to confirm your order
                         </p>
                         <p className="Typography_p6__xuxGw CardAddress_address__tGiBR" style={{ fontSize: 13 }}>
                           This will be deducted from the order total and you'll pay the rest upon delivery with a
-                          delivery fee of 10 QAR
+                          delivery fee of 10 OMR
                         </p>
                       </div>
                     </label>
@@ -341,14 +341,14 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                   <h3 className="Typography_h3__HPYxa">Total Amount</h3>
                   <div className="PriceInfo_prices__TmlB4">
                     <h3 data-test-id="checkout-pay-with-products-total-price" className="Typography_h3__HPYxa">
-                      {isCheked === "payfull" ? total : 10} QAR
+                      {isCheked === "payfull" ? total : 10} OMR
                     </h3>
                   </div>
                 </div>
                 <button type="submit" className="Button_button Button_primary Button_wide__XK76o">
                   <span className="Button_content">
                     Continue to Payment
-                    <p>( {isCheked === "payfull" ? total : 10} QAR)</p>
+                    <p>( {isCheked === "payfull" ? total : 10} OMR)</p>
                   </span>
                 </button>
               </div>
