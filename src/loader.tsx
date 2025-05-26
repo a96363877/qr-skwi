@@ -1,13 +1,26 @@
-
-export const Loader = (props:{show:boolean}) => {
-    return (<div style={{display:props.show?"flex":"none",position:'fixed',
-    flexDirection:"column",textAlign:'center',justifyItems:"center",justifyContent:'center',top:'40%',bottom:'auto',left:0,right:0,zIndex:1}}>
+export const Loader = (props: { show: boolean }) => {
+    return (
+      <div
+        style={{
+          display: props.show ? "flex" : "none",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "rgba(255, 255, 255, 0.5)", 
+          justifyContent: "center",
+          alignItems: "center",
+          zIndex: 9999,
+        }}
+      >
         <img
-        style={{position:'fixed',left:'45%',top:'40%'}}
-        className="w-full m-auto py-16"
-        src="/spp.gif"
-        alt="lsl"
-width={90}            color="#0062d9cc"
+          src="/spp.gif"
+          alt="Loading"
+          width={90}
+          style={{ display: "block" }}
         />
-    </div>)
-}
+      </div>
+    );
+  };
+  
