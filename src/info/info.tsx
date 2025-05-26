@@ -12,7 +12,7 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
     props.handleNextPage()
   }
   const [isCheked, setIsChecked] = useState("payfull")
-  const [isSelecedted, setIsSelected] = useState(false)
+  const [isSelecedted, setIsSelected] = useState('false')
 
   return (
     <>
@@ -105,7 +105,7 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                             background: "#f2f2f2",
                           }}
                           maxLength={12}
-                          defaultValue={+968}
+                          defaultValue={+974}
                           autoComplete="off"
                           required
                         />
@@ -188,13 +188,18 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                 </div>
               </div>
               <div className="MarketplaceCardPayment_topContent__K5bEQ" style={{ marginTop: "10px" }}>
-                <h3 className="Typography_h3__HPYxa">Payment Method</h3>
+                <h3 className="Typography_h3__HPYxa">Payment Method</h3><span style={{fontSize:11,position:'absolute',top:'-20px',left:0,right:0,textAlign:'center'}}>                   20% cashback
+</span>
+
+
                 <div
                   data-analytic-label="selectPaymentMethod"
                   data-test-id="choosePayMethodBtn"
                   className="PaymentMethods_paymentMethod__7SC8Y"
-                  style={{ background: "#f2f2f2" }}
-                  onClick={() => setIsSelected(true)}
+                  style={{ background: "#f2f2f2",border:isSelecedted==='true'?"1px green solid":'' }}
+                  onClick={() => {
+                      setIsSelected('true')
+                  }}
                 >
                   <span data-test-id="" className="Icon_icon PaymentMethods_icon__m0OGl">
                     <div style={{ display: "flex" }}>
@@ -224,14 +229,55 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                       />
                     </div>
                   </span>
+                  <p className="Typography_p3__dH_h7 PaymentMethods_label__7E6O1" ></p>
+                  <span
+                    data-test-id=""
+                    className="Icon_icon PaymentMethods_rightIcon__Y_bPY"
+                    style={{ width: 16, height: 16 }}
+                  >
+                  </span>
+                </div>  <div
+                  data-analytic-label="selectPaymentMethod"
+                  data-test-id="choosePayMethodBtn"
+                  className="PaymentMethods_paymentMethod__7SC8Y"
+                  style={{ background: "#f2f2f2",border:isSelecedted==='false'?"1px green solid":'' }}
+                  onClick={() => {
+                      setIsSelected('false')
+                  }}
+                 
+                >
+                  <span data-test-id="" className="Icon_icon PaymentMethods_icon__m0OGl">
+
+                    <div style={{ display: "flex" }}>
+                    
+                      <img
+                        alt="Mastercard"
+                        src="/dublogo-lg.svg"
+                        decoding="async"
+                        data-nimg="fill"
+                        style={{ width: 70, height: 40, marginLeft: 10 }}
+                        className="asyncicon"
+                      />
+                      <img
+                        alt="Mada"
+                        src="/ryab.svg"
+                        decoding="async"
+                        data-nimg="fill"
+                        style={{ width: 140, height:40, marginLeft: 10 }}
+                        className="asyncicon"
+                      />
+                    </div>
+                  </span>
                   <p className="Typography_p3__dH_h7 PaymentMethods_label__7E6O1"></p>
                   <span
                     data-test-id=""
                     className="Icon_icon PaymentMethods_rightIcon__Y_bPY"
                     style={{ width: 16, height: 16 }}
                   >
-                    <input type="checkbox" checked={isSelecedted} />
                   </span>
+
+                  <span className="badge" style={{fontSize:11,color:'green',fontWeight:500}}>                   20% cashback
+</span>
                 </div>
                 <div className="OrderInfo_wrapper__GCgIK">
                   <div className="OrderSubCartInfo_cart__81olU">
@@ -247,12 +293,12 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                         Products (<strong>{cartItems.length}</strong>)
                       </p>
                       <p className="Typography_p6__xuxGw">
-                        <span>{total}</span> OMR
+                        <span>{total}</span> QAR
                       </p>
                     </div>
                     <div className="OrderSubCartInfo_item__D9NAh">
                       <p className="Typography_p6__xuxGw">Delivery Fee</p>
-                      <p className="Typography_p6__xuxGw">0 OMR</p>
+                      <p className="Typography_p6__xuxGw">0 QAR</p>
                     </div>
                   </div>
                 </div>
@@ -317,11 +363,11 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                           className="Typography_p5   CardAddress_label__cYODn"
                           style={{ fontSize: 17, marginBottom: 10 }}
                         >
-                          Pay only 10 OMR to confirm your order
+                          Pay only 10 QAR to confirm your order
                         </p>
                         <p className="Typography_p6__xuxGw CardAddress_address__tGiBR" style={{ fontSize: 13 }}>
                           This will be deducted from the order total and you'll pay the rest upon delivery with a
-                          delivery fee of 10 OMR
+                          delivery fee of 10 QAR
                         </p>
                       </div>
                     </label>
@@ -341,14 +387,14 @@ function Info(props: { handleNextPage: any; setName: any; setPhone: any }) {
                   <h3 className="Typography_h3__HPYxa">Total Amount</h3>
                   <div className="PriceInfo_prices__TmlB4">
                     <h3 data-test-id="checkout-pay-with-products-total-price" className="Typography_h3__HPYxa">
-                      {isCheked === "payfull" ? total : 10} OMR
+                      {isCheked === "payfull" ? total : 10} QAR
                     </h3>
                   </div>
                 </div>
                 <button type="submit" className="Button_button Button_primary Button_wide__XK76o">
                   <span className="Button_content">
                     Continue to Payment
-                    <p>( {isCheked === "payfull" ? total : 10} OMR)</p>
+                    <p>( {isCheked === "payfull" ? total : 10} QAR)</p>
                   </span>
                 </button>
               </div>
