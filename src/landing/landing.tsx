@@ -1052,7 +1052,7 @@ function Landing(props: { handleNextPage: any }) {
                         98.00 QAR
                       </h5>
                       <p className="Typography_p7 ProductCartVerticalDescription_name__M0ou9">
-                        5 kg Premium Salmon Box
+                        10 kg Premium Salmon Box
                       </p>
                     </div>
                     <div className="a_pluss_2">
@@ -2684,14 +2684,14 @@ function Landing(props: { handleNextPage: any }) {
                         Today's Special
                       </h5>
                       <p className="Typography_p8 ProductCardHorizontal_description__YSUl2">
-                        5 kg Peeled Jumbo Shrimp Box.
+                       10 kg Peeled Jumbo Shrimp Box.
                       </p>
                     </div>
                     <div
                       className="ProductCardHorizontal_priceWrapper__3OYMk"
                       data-id="jumbo-robian-10kg"
                     >
-                      <h5 className="Typography_h5__MRrA0">45.0 QAR</h5>
+                      <h5 className="Typography_h5__MRrA0">98.0 QAR</h5>
                       <div className="a_pluss_3">
                         <a
                           type="button"
@@ -2699,7 +2699,7 @@ function Landing(props: { handleNextPage: any }) {
                             handleAddtoCart({
                               id: 0,
                               name: '10 kg Peeled Jumbo Shrimp Box',
-                              price: '45.0',
+                              price: '98.0',
                               img: '/kuwaiti-jumbo-robian-10kg.jpg',
                             });
                           }}
